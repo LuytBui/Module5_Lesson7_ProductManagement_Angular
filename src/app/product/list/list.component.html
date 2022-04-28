@@ -1,0 +1,22 @@
+<div class="container mt-3">
+  <table class="table table-striped">
+    <thead>
+    <th>#</th>
+    <th>Model</th>
+    <th>Producer</th>
+    <th>Price</th>
+    <th>Description</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; index as i">
+        <td>{{i}}</td>
+        <td>{{product.model}}</td>
+        <td>{{product.producer}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.description}}</td>
+        <td><a href="">Edit</a></td>
+        <td><a href="">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
