@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {ProductService} from '../../service/product.service';
+import {NotificationService} from '../../service/notification/notification.service';
 
 @Component({
   selector: 'app-create',
@@ -16,7 +17,9 @@ export class CreateComponent implements OnInit {
     description: new FormControl('', []),
   });
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              private notificationService: NotificationService
+          ) {
   }
 
   ngOnInit() {
@@ -25,10 +28,10 @@ export class CreateComponent implements OnInit {
   createProduct() {
     this.productService.create(this.productForm.value).subscribe(
       () => {
-        alert("success");
+        this.notificationService.showSuccessMessage("Success");
       },
       (error) => {
-        alert("error");
+        this.notificationService.showErrorMessage("Error");
       }
     );
   }
