@@ -7,12 +7,16 @@ import { ListComponent } from './product/list/list.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CreateComponent } from './product/create/create.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { EditComponent } from './product/edit/edit.component';
+import { DeleteComponent } from './product/delete/delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

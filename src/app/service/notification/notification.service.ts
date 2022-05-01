@@ -8,22 +8,22 @@ declare var Swal: any;
 
 export class NotificationService {
 
-  showSuccessMessage(message: string){
+  showSuccessMessage(message: string) {
     Swal.fire({
       title: 'Success!',
       text: message,
-      icon: 'sucess',
+      icon: 'success',
       confirmButtonText: 'OK'
-    })
+    });
   }
 
-  showErrorMessage(message: string){
+  showErrorMessage(message: string) {
     Swal.fire({
       title: 'Error!',
       text: message,
       icon: 'error',
       confirmButtonText: 'OK'
-    })
+    });
   }
 
 
