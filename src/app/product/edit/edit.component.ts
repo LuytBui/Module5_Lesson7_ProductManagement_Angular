@@ -1,11 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 import {Category} from '../../model/category';
 import {CategoryService} from '../../service/category/category.service';
 import {Product} from '../../model/product';
-import {ActivatedRoute, ParamMap, Route} from '@angular/router';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 import {ProductService} from '../../service/product/product.service';
-import {formatCurrency} from '@angular/common';
 import {NotificationService} from '../../service/notification/notification.service';
 
 declare var $: any;

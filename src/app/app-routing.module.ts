@@ -4,17 +4,22 @@ import {ListComponent} from './product/list/list.component';
 import {CreateComponent} from './product/create/create.component';
 import {EditComponent} from './product/edit/edit.component';
 import {DeleteComponent} from './product/delete/delete.component';
+import {LoginComponent} from './login/login.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'products',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'products',
     component: ListComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'products/create',

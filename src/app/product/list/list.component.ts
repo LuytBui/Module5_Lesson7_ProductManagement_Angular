@@ -20,7 +20,7 @@ export class ListComponent implements OnInit {
     this.productService.getAll().subscribe((response) => {
       this.products = response as Product[];
     }, error => {
-      console.log('error!');
+      console.log(error);
     });
   }
 
